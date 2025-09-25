@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Eventos</title>
+    <style>
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            background-color: bisque;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="div" onclick="clique()" onmouseenter="entrar()" onmouseout="sair()">
+            div
+        </div>
+    </main>
+    <script>
+        var a = document.getElementById('div');
+        function clique() {
+            a.style.background = 'black';
+            a.style.color = 'white';
+        }
+
+        function entrar() {
+            a.innerText = "Entrou!";
+        }
+        function sair() {
+            a.innerText = "Saiu";
+        }
+    </script>
+</body>
+</html>

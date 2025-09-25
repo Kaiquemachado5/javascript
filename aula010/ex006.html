@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+            background-color: burlywood;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        #input-div {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 5px;
+            padding: 8px;
+            border-radius: 6px;
+            background-color: aqua;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
+        }
+
+        #entrada1, #entrada2, #entrada3, #entrada4, #entrada5, #entrada6, #entrada7, #entrada8 {
+            max-width: 80px;
+            border: none;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.486);
+            border-radius: 5px;
+        }
+        
+        #somar, #subtrair, #multiplicar, #dividir {
+            border: none;
+            background-color: rgb(10, 117, 10);
+            color: white;
+            font-size: 0.6em;
+            text-transform: uppercase;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.267);
+            border-radius: 4px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Somando valores</h1>
+            <div id="input-div">
+                <input type="number" name="entrada1" id="entrada1"> +
+                <input type="number" name="entrada2" id="entrada2">
+                <input type="button" value="Somar" id="somar">
+            </div>
+            <p>Resultado:</p>
+            <p id="resultado"></p>
+        </section>
+
+        <section>
+            <h1>Subtraindo valores</h1>
+            <div id="input-div">
+                <input type="number" name="entrada1" id="entrada3"> -
+                <input type="number" name="entrada2" id="entrada4">
+                <input type="button" value="subtrair" id="subtrair">
+            </div>
+            <p>Resultado:</p>
+            <p id="resultado1"></p>
+        </section>
+
+        <section>
+            <h1>Multiplicando valores</h1>
+            <div id="input-div">
+                <input type="number" name="entrada1" id="entrada5"> x
+                <input type="number" name="entrada2" id="entrada6">
+                <input type="button" value="multiplicar" id="multiplicar">
+            </div>
+            <p>Resultado:</p>
+            <p id="resultado2"></p>
+        </section>
+
+        <section>
+            <h1>Dividindo valores</h1>
+            <div id="input-div">
+                <input type="number" name="entrada1" id="entrada7"> /
+                <input type="number" name="entrada2" id="entrada8">
+                <input type="button" value="dividir" id="dividir">
+            </div>
+            <p>Resultado:</p>
+            <p id="resultado3"></p>
+        </section>
+    </main>
+
+    <script>
+        var soma = document.getElementById('somar');
+        soma.addEventListener('click', somar);
+
+        var subtracao = document.getElementById('subtrair');
+        subtracao.addEventListener('click', subtrair);
+
+        var multiplicacao = document.getElementById('multiplicar');
+        multiplicacao.addEventListener('click', multiplicar);
+
+        var divisao = document.getElementById('dividir');
+        divisao.addEventListener('click', dividir);
+
+        function somar() {
+            var entrada1 = document.getElementById('entrada1');
+            var entrada2 = document.getElementById('entrada2');
+            var resultado = document.getElementById('resultado');
+
+            n1 = Number(entrada1.value);
+            n2 = Number(entrada2.value);
+            s = n1 + n2;
+            resultado.innerText = s;
+        }
+
+        function subtrair() {
+            var entrada1 = document.getElementById('entrada3');
+            var entrada2 = document.getElementById('entrada4');
+            var resultado = document.getElementById('resultado1');
+
+            n1 = Number(entrada1.value);
+            n2 = Number(entrada2.value);
+            s = n1 - n2;
+            resultado.innerText = s;
+        }
+
+        function multiplicar() {
+            var entrada1 = document.getElementById('entrada5');
+            var entrada2 = document.getElementById('entrada6');
+            var resultado = document.getElementById('resultado2');
+
+            n1 = Number(entrada1.value);
+            n2 = Number(entrada2.value);
+            s = n1 * n2;
+            resultado.innerText = s;
+        }
+
+        function dividir() {
+            var entrada1 = document.getElementById('entrada7');
+            var entrada2 = document.getElementById('entrada8');
+            var resultado = document.getElementById('resultado3');
+
+            n1 = Number(entrada1.value);
+            n2 = Number(entrada2.value);
+            s = n1 / n2;
+            resultado.innerText = s;
+        }
+    </script>
+</body>
+</html>

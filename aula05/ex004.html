@@ -13,10 +13,15 @@
     </style>
 </head>
 <body>
+    <h1>Iniciando estudos do DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>APrendendo a usar <strong>DOM</strong></p>
+    <div id="msg">Clique em mim</div>
     <script>
-        var nome = window.prompt('Qual é o seu nome?');
-        document.write(`Olá, <srtong>${nome}</strong>! Seu nome tem ${nome.length} letras! <br>`);
-        document.write(`Seu nome em maiusculas é <srtong>${nome.toUpperCase()}</strong>!`);
+        var p1 = document.getElementsByTagName('p')[0];
+        window.document.write(p1.innerText);
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green';
     </script>
 </body>
 </html>
