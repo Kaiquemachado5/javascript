@@ -16,44 +16,42 @@ function verificar() {
         if (sexo[0].checked) {
             sexo = 'Masculino';
                 if (idade >= 0 && idade < 10){
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/menino.jpg')";
                     resImg.style.backgroundPosition = "rigth center";
                 } else if (idade < 21) {
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/jovem-rapaz.jpg')";
                     resImg.style.backgroundPosition = "center center";
                 } else if (idade < 50) {
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/homem.jpg')";
                     resImg.style.backgroundPosition = "left center";
                 } else {
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/idoso.jpg')";
                     resImg.style.backgroundPosition = "center center";
                 }
         } else {
             sexo = 'Feminino';
                 if (idade >= 0 && idade < 10){
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/menina.jpg')";
                     resImg.style.backgroundPosition = "center center";
                 } else if (idade < 21) {
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/jovem-menina.jpg')";
                     resImg.style.backgroundPosition = "center center";
                 } else if (idade < 50) {
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/mulher.jpg')";
                     resImg.style.backgroundPosition = "center center";
                 } else {
-                    res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
+                    res.innerHTML = `Detectamos <strong>${sexo}</strong> com <strong>${idade}</strong> anos.`
                     resImg.style.backgroundImage = "url('assets/idosa.jpg')";
                     resImg.style.backgroundPosition = "rigth center";
                 }
         }
-
-        res.innerHTML = `Detectamos ${sexo} com ${idade} anos.`
     };
     
 }
