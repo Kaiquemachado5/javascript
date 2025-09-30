@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio js</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <p>Velocidade do carro: <form action="#"><input type="number" name="vel" id="vel"> Km/h. <input type="submit" value="Verificar" onclick="calcular()"></form></p>
+    <p>Resultado da Verificação:</p>
+    <p id="resultado"></p>
+
+    <script>
+        var resultado = document.querySelector('p#resultado');
+
+        function calcular() {
+
+            var vel = Number(document.getElementById('vel').value);
+
+                if (vel <= 60) {
+                    resultado.innerHTML = `Velociade de <strong>${vel}</strong>. Sem multas. Boa viagem!`;
+                } else {
+                    resultado.innerHTML = `Velociade de <strong>${vel}</strong>. Você foi MULTADO!`;
+                }
+            document.getElementById('vel').value = "";
+        }
+    </script>
+</body>
+</html>
